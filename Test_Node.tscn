@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://hdap3lmsxd44"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ysij"]
-radius = 77.42093
+radius = 169.02663
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ysij"]
 
 [node name="Node2D" type="Node2D" unique_id=766585478]
 
@@ -10,3 +12,11 @@ radius = 77.42093
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=620850941]
 position = Vector2(489, 279)
 shape = SubResource("CircleShape2D_1ysij")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1258100650]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=91194486]
+position = Vector2(1359, 212.00002)
+rotation = -0.008821398
+scale = Vector2(30, 30)
+shape = SubResource("CapsuleShape2D_1ysij")
