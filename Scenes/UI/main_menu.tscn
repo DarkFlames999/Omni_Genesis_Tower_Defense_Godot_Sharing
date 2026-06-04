@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dfmcfkcy2nabf"]
+
+[node name="MainMenu" type="Control" unique_id=1671755041]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=273875133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.059363365, 0.061456576, 0.08812923, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=91737377]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -258.0
+offset_right = 202.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=964804040]
+layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="TITLE" type="Label" parent="CenterContainer/VBoxContainer" unique_id=792394236]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "OMNI-GENESIS 
+TOWER-DEFENSE"
+horizontal_alignment = 1
+
+[node name="PLAY" type="Button" parent="CenterContainer/VBoxContainer" unique_id=786588070]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[node name="SETTINGS" type="Button" parent="CenterContainer/VBoxContainer" unique_id=784674795]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+
+[node name="QUIT" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2073114043]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="SettingsCenterContainer" type="CenterContainer" parent="." unique_id=153553888]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.99994
+offset_top = -174.99998
+offset_right = -136.99994
+offset_bottom = -134.99998
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8.838675, 8.838675)
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsCenterContainer" unique_id=177696575]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsCenterContainer/PanelContainer" unique_id=1798456634]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsCenterContainer/PanelContainer/MarginContainer" unique_id=197975808]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=592135414]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1227574897]
+layout_mode = 2
