@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://o3ycutthxd0l"]
+
+[ext_resource type="Script" uid="uid://dggxlqbsl67dh" path="res://Scenes/UI/settings_menu.gd" id="1_ux7nt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ux7nt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8biv4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ph53r"]
+
+[node name="SettingsMenu" type="Control" unique_id=893346900]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ux7nt")
+
+[node name="SettingsCenterContainer" type="CenterContainer" parent="." unique_id=1994356619]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -323.99997
+offset_right = -1.5404053
+offset_bottom = 7.329773
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.9582493, 1.9582493)
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsCenterContainer" unique_id=232050530]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsCenterContainer/PanelContainer" unique_id=849746599]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsCenterContainer/PanelContainer/MarginContainer" unique_id=1534941037]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1943237160]
+layout_mode = 2
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1087529637]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1954594543]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Option - 1"
+label_settings = SubResource("LabelSettings_ux7nt")
+
+[node name="CheckButton" type="CheckButton" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=241152544]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1010266974]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Option - 2"
+label_settings = SubResource("LabelSettings_8biv4")
+
+[node name="CheckButton2" type="CheckButton" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1922162731]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1611205224]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Option - 3"
+label_settings = SubResource("LabelSettings_ph53r")
+
+[node name="CheckButton3" type="CheckButton" parent="SettingsCenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1994747330]
+unique_name_in_owner = true
+layout_mode = 2
