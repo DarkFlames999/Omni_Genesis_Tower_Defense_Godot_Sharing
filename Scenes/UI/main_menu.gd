@@ -1,5 +1,6 @@
 extends Control
 
+
 func _ready():
 	%PLAY.pressed.connect(play)
 	%SETTINGS.pressed.connect(settings) 

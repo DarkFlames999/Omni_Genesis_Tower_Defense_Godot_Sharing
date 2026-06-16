@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Omni-Genesis-Tower-Defense"
-run/main_scene="uid://dfmcfkcy2nabf"
+run/main_scene="uid://ba3yd10n4sw8k"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [physics]
