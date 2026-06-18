@@ -1,6 +1,39 @@
 [gd_scene format=3 uid="uid://dfmcfkcy2nabf"]
 
 [ext_resource type="Script" uid="uid://cc70yr624q2a1" path="res://Scenes/UI/main_menu.gd" id="1_5wsvm"]
+[ext_resource type="Texture2D" uid="uid://fs602dyjprcx" path="res://addons/orchestrator/icons/button.png" id="2_i2xx2"]
+
+[sub_resource type="Theme" id="Theme_i2xx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2xx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o14dv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7lva"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mrfpk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pqbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gih0s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k33u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrjdf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqme5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jewm6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cejvf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ru8vt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypsd1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xp0kt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1yfdm"]
 
 [node name="MainMenu" type="Control" unique_id=1671755041]
 layout_mode = 3
@@ -11,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5wsvm")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=273875133]
+[node name="Background" type="ColorRect" parent="." unique_id=273875133]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,46 +54,103 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0.059363365, 0.061456576, 0.08812923, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=91737377]
+[node name="TITLE" type="Label" parent="." unique_id=792394236]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -202.0
-offset_top = -258.0
-offset_right = 202.0
-offset_bottom = 258.0
+offset_left = -235.85
+offset_right = 168.15076
+offset_bottom = 141.0
 grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=964804040]
-layout_mode = 2
-theme_override_constants/separation = 75
-alignment = 1
-
-[node name="TITLE" type="Label" parent="CenterContainer/VBoxContainer" unique_id=792394236]
-layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "OMNI-GENESIS 
 TOWER-DEFENSE"
 horizontal_alignment = 1
 
-[node name="PLAY" type="Button" parent="CenterContainer/VBoxContainer" unique_id=786588070]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=964804040]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.0
+offset_top = -460.0
+offset_right = 196.81506
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8137161, 0.76199275)
+theme = SubResource("Theme_i2xx2")
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="PLAY" type="Button" parent="VBoxContainer" unique_id=786588070]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.71
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.049166653, 0, 1)
+theme_override_colors/font_hover_color = Color(0.73, 0.48909998, 0.48909998, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i2xx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_o14dv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u7lva")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mrfpk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4pqbp")
 text = "PLAY"
+autowrap_mode = 1
+autowrap_trim_flags = 0
 
-[node name="SETTINGS" type="Button" parent="CenterContainer/VBoxContainer" unique_id=784674795]
+[node name="Button" type="Sprite2D" parent="VBoxContainer/PLAY" unique_id=1658403310]
+position = Vector2(224.89417, 60.368015)
+scale = Vector2(0.68998384, 0.49300793)
+texture = ExtResource("2_i2xx2")
+
+[node name="SETTINGS" type="Button" parent="VBoxContainer" unique_id=784674795]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.71
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.049166653, 0, 1)
+theme_override_colors/font_hover_color = Color(0.73, 0.48909998, 0.48909998, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gih0s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k33u3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lrjdf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wqme5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jewm6")
 text = "SETTINGS"
+autowrap_mode = 1
+autowrap_trim_flags = 0
 
-[node name="QUIT" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2073114043]
+[node name="Button2" type="Sprite2D" parent="VBoxContainer/SETTINGS" unique_id=63777653]
+position = Vector2(224.89417, 54.97089)
+scale = Vector2(0.68998384, 0.49300793)
+texture = ExtResource("2_i2xx2")
+
+[node name="QUIT" type="Button" parent="VBoxContainer" unique_id=2073114043]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.71
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.049166653, 0, 1)
+theme_override_colors/font_hover_color = Color(0.73, 0.48909998, 0.48909998, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cejvf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ru8vt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ypsd1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xp0kt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1yfdm")
 text = "QUIT"
+autowrap_mode = 1
+autowrap_trim_flags = 0
+
+[node name="Button3" type="Sprite2D" parent="VBoxContainer/QUIT" unique_id=2021076872]
+position = Vector2(224.89417, 58.76017)
+scale = Vector2(0.68998384, 0.49300793)
+texture = ExtResource("2_i2xx2")
