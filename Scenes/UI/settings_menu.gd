@@ -20,4 +20,4 @@ func _Check_Button_3() -> void:
 	%Label3.label_settings.outline_color = Color.AQUA
 	
 func _Exit_Button() -> void:
-	GameStateMachine.change_state(GameStateMachine.States.MAIN_MENU)
+	Main.States.setState("MainMenu")

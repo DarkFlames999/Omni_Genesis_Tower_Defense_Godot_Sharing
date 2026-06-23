@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 ConfigFiles="*uid://dyele6yrklc1i"
 GameStateMachine="*uid://bbu4ebwo30k7i"
+MainState="uid://c5ua051556wmc"
 
 [physics]
 
