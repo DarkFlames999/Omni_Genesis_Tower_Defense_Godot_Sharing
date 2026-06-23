@@ -5,6 +5,7 @@ func _ready() -> void:
 	%CheckButton.pressed.connect(_Check_Button_1)
 	%CheckButton2.pressed.connect(_Check_Button_2)
 	%CheckButton3.pressed.connect(_Check_Button_3)
+	%Exit_Button.pressed.connect(_Exit_Button)
 	
 func _Check_Button_1() -> void:
 	%Label.label_settings.outline_size = 4
@@ -17,3 +18,6 @@ func _Check_Button_2() -> void:
 func _Check_Button_3() -> void:
 	%Label3.label_settings.outline_size = 2
 	%Label3.label_settings.outline_color = Color.AQUA
+	
+func _Exit_Button() -> void:
+	GameStateMachine.change_state(GameStateMachine.States.MAIN_MENU)

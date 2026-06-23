@@ -14,6 +14,11 @@ config/name="Omni-Genesis-Tower-Defense"
 run/main_scene="uid://ba3yd10n4sw8k"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+ConfigFiles="*uid://dyele6yrklc1i"
+GameStateMachine="*uid://bbu4ebwo30k7i"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

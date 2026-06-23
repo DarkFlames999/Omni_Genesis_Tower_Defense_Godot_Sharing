@@ -24,17 +24,16 @@ func _enter_state(state: States) -> void:
 		States.MAIN_MENU:
 			get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")
 		States.SETTINGS:
-			pass
+			get_tree().change_scene_to_file("res://Scenes/UI/Settings_menu.tscn")
 		States.LOADING:
 			pass
 		States.GAME_PLAY:
-			pass
+			get_tree().change_scene_to_file("res://Scenes/Game/main_game.tscn")
 		States.CREDITS:
-			pass
+			get_tree().change_scene_to_file("res://Scenes/UI/credits_menu.tscn")
 		States.GAME_OVER:
 			pass
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_enter_state(States.MAIN_MENU)
 

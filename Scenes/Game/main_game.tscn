@@ -1,11 +1,6 @@
 [gd_scene format=3 uid="uid://ba3yd10n4sw8k"]
 
 [ext_resource type="Script" uid="uid://b8307yaq6x6st" path="res://Scenes/Game/main_game.gd" id="1_gucqa"]
-[ext_resource type="Script" uid="uid://bbu4ebwo30k7i" path="res://Scenes/Game/Game_State_Machine.gd" id="2_88ity"]
 
 [node name="GameNode" type="Node2D" unique_id=511661203]
 script = ExtResource("1_gucqa")
-
-[node name="GameStateMachine" type="Node2D" parent="." unique_id=1553228707]
-unique_name_in_owner = true
-script = ExtResource("2_88ity")
