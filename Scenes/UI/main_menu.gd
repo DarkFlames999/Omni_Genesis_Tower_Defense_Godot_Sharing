@@ -8,18 +8,18 @@ func _ready():
 	
 func play():
 	print("play button pressed")
-	GameStateMachine.change_state(GameStateMachine.States.GAME_PLAY)
-	print(GameStateMachine.current_state)
+	Main.States.setState("Gameplay")
+	print(Main.States.stateName())
 	
 func settings():
 	print("settings button pressed")
-	GameStateMachine.change_state(GameStateMachine.States.SETTINGS)
-	print(GameStateMachine.current_state)
+	Main.States.setState("Settings")
+	print(Main.States.stateName())
 	
 func credits():
 	print("credits button pressed")
-	GameStateMachine.change_state(GameStateMachine.States.CREDITS)
-	print(GameStateMachine.current_state)
+	Main.States.setState("Credits")
+	print(Main.States.stateName())
 	
 func quit_game():
 	get_tree().quit()
