@@ -62,3 +62,7 @@ func setState(name: String) -> void:
 func getState(name: String) -> State:
 	return _States.get(name, null)
 	
+func update(delta: float) -> void:
+	if state() == null: return
+	state()._update(delta)
+	
