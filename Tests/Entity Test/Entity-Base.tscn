@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cjjammssxilmu"]
+
+[ext_resource type="Script" uid="uid://cckw77d14qohk" path="res://Tests/Entity Test/Entity_Script.gd" id="1_hjmfj"]
+[ext_resource type="PackedScene" uid="uid://bd16samf1j2gh" path="res://Tests/Entity Test/health_module.tscn" id="2_hjmfj"]
+[ext_resource type="Script" uid="uid://ciusv1kmt77sy" path="res://Tests/Entity Test/HitboxModule.gd" id="3_3geli"]
+[ext_resource type="Script" uid="uid://dj08r0n8qdn1" path="res://Tests/Entity Test/HurtboxModule.gd" id="3_iu1o8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3geli"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3geli"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=710630484]
+position = Vector2(528, 285)
+scale = Vector2(6.680005, 6.680005)
+collision_layer = 64
+collision_mask = 4
+script = ExtResource("1_hjmfj")
+
+[node name="HealthModule" parent="." unique_id=862766350 instance=ExtResource("2_hjmfj")]
+Max_Health = 100.0
+
+[node name="HurtboxModule" type="Area2D" parent="." unique_id=2056835906]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("3_iu1o8")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="HurtboxModule" unique_id=67573545]
+shape = SubResource("RectangleShape2D_3geli")
+debug_color = Color(0.9545978, 0.17161927, 0.33600554, 0.41960785)
+
+[node name="HitboxModule" type="Area2D" parent="." unique_id=491745386 node_paths=PackedStringArray("Health_Module")]
+script = ExtResource("3_3geli")
+Health_Module = NodePath("../HealthModule")
+
+[node name="Hitbox" type="CollisionShape2D" parent="HitboxModule" unique_id=964355385]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_3geli")

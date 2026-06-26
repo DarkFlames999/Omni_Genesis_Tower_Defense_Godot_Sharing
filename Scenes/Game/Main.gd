@@ -24,10 +24,15 @@ class _Gameplay extends NodeState:
 class _Credits extends NodeState:
 	func _onEnter() -> void:
 		changeSceneTo("res://Scenes/UI/credits_menu.tscn")
+		
+class _Test extends  NodeState:
+	func _onEnter() -> void:
+		changeSceneTo("res://Tests/Entity Test/Entity-Base.tscn")
 
 static var States = StateMachine.new({
 	"MainMenu": 	_MainMenu.new(),
 	"Settings": _Settings.new(),
 	"Gameplay": _Gameplay.new(),
 	"Credits" : _Credits .new(),
+	"Test"    : _Test.new()
 })

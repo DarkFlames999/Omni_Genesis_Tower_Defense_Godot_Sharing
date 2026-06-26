@@ -20,6 +20,13 @@ ConfigFiles="*uid://dyele6yrklc1i"
 GameStateMachine="*uid://bbu4ebwo30k7i"
 MainState="uid://c5ua051556wmc"
 
+[layer_names]
+
+2d_physics/layer_1="Foreground Environment"
+2d_physics/layer_2="Midground Environment"
+2d_physics/layer_3="Player"
+2d_physics/layer_7="Enemies"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

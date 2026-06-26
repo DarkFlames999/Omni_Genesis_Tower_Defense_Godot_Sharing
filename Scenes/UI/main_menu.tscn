@@ -178,3 +178,13 @@ autowrap_trim_flags = 0
 position = Vector2(224.89417, 58.76017)
 scale = Vector2(0.68998384, 0.49300793)
 texture = ExtResource("2_i2xx2")
+
+[node name="TEST" type="Button" parent="." unique_id=750653555]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 21.0
+offset_right = 129.0
+offset_bottom = 52.0
+text = "TEST BUTTON"

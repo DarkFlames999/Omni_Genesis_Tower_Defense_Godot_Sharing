@@ -1,0 +1,272 @@
+[gd_scene format=3 uid="uid://d0c7fcknbktxe"]
+
+[ext_resource type="Texture2D" uid="uid://djgkkb1rll713" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192539.png" id="1_lh8w6"]
+[ext_resource type="Texture2D" uid="uid://c0gvkx8hfcyxe" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192548.png" id="2_07c23"]
+[ext_resource type="Texture2D" uid="uid://c2vphooj02dsu" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192553.png" id="3_jokat"]
+[ext_resource type="Texture2D" uid="uid://dxtsgm08listm" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192559.png" id="4_v7gfl"]
+[ext_resource type="Texture2D" uid="uid://bb8dqrhun8ift" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192516.png" id="5_3dk3o"]
+[ext_resource type="Texture2D" uid="uid://bm1w7ctgpnl4l" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192527.png" id="6_8aqgg"]
+[ext_resource type="Texture2D" uid="uid://bn4p0kwakt1n0" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192508.png" id="7_c6bmq"]
+[ext_resource type="Texture2D" uid="uid://b1bg6xueyorlj" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192502.png" id="8_w6suo"]
+[ext_resource type="Texture2D" uid="uid://3rldt6s5ijsa" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192455.png" id="9_ka1qx"]
+[ext_resource type="Texture2D" uid="uid://b3bunbefk38jt" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192446.png" id="10_x0y5x"]
+[ext_resource type="Texture2D" uid="uid://2fosmwbc06re" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192435.png" id="11_lavnu"]
+[ext_resource type="Texture2D" uid="uid://e1h566quf4jj" path="res://Assets/Rigs/Arachno-Ungula/Arachno-Ungula_20260617192408.png" id="12_sh3oy"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_6n3b1"]
+target_nodepath = NodePath("../../../IK Targets/l_arm Target")
+tip_nodepath = NodePath("../../Body/L_hand")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 6
+joint_data/0/bone2d_node = NodePath("body/l_bicept")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = -238.62895
+joint_data/0/constraint_angle_max = 360.0
+joint_data/0/constraint_angle_invert = false
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 7
+joint_data/1/bone2d_node = NodePath("body/l_bicept/l_forearm")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 0.0
+joint_data/1/constraint_angle_max = 360.0
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_m02x3"]
+bone_index = 8
+bone2d_node = NodePath("body/l_bicept/l_forearm/l_hand")
+target_nodepath = NodePath("../../../IK Targets/l_arm Target/l-hand LookAt")
+enable_constraint = true
+constraint_angle_min = 0.0
+constraint_angle_max = 360.0
+constraint_angle_invert = false
+constraint_in_localspace = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_htcqv"]
+enabled = true
+modification_count = 2
+modifications/0 = SubResource("SkeletonModification2DCCDIK_6n3b1")
+modifications/1 = SubResource("SkeletonModification2DLookAt_m02x3")
+
+[node name="Arachno-Ungula" type="Node2D" unique_id=1981946793]
+
+[node name="Character Container" type="Node2D" parent="." unique_id=213940848]
+
+[node name="Body" type="Node2D" parent="Character Container" unique_id=1775809640]
+
+[node name="R_hand" type="Sprite2D" parent="Character Container/Body" unique_id=545188165]
+position = Vector2(1028.8279, 406.09567)
+rotation = -0.042820334
+texture = ExtResource("1_lh8w6")
+offset = Vector2(-328, -35.5)
+
+[node name="R_foearm" type="Sprite2D" parent="Character Container/Body" unique_id=1747422347]
+position = Vector2(919, 480)
+rotation = -0.12190881
+texture = ExtResource("2_07c23")
+offset = Vector2(-214, -92.5)
+
+[node name="R_bicept" type="Sprite2D" parent="Character Container/Body" unique_id=1869432129]
+position = Vector2(776, 301)
+texture = ExtResource("3_jokat")
+offset = Vector2(-67, 83.5)
+
+[node name="body" type="Sprite2D" parent="Character Container/Body" unique_id=2051834741]
+position = Vector2(513, 154)
+texture = ExtResource("4_v7gfl")
+offset = Vector2(195, 227)
+
+[node name="L_forearm" type="Sprite2D" parent="Character Container/Body" unique_id=726950554]
+position = Vector2(880.9962, 519)
+rotation = 0.008533474
+scale = Vector2(0.9999987, 0.9999987)
+texture = ExtResource("5_3dk3o")
+offset = Vector2(-170, -132.5)
+
+[node name="L_bicept" type="Sprite2D" parent="Character Container/Body" unique_id=1130411232]
+position = Vector2(723, 258)
+texture = ExtResource("6_8aqgg")
+offset = Vector2(-13, 125.5)
+
+[node name="L_hand" type="Sprite2D" parent="Character Container/Body" unique_id=382001346]
+position = Vector2(1052.3158, 476.92242)
+rotation = 0.6586838
+scale = Vector2(0.9999985, 0.9999985)
+texture = ExtResource("7_c6bmq")
+offset = Vector2(-332, -88.5)
+
+[node name="Leg 5" type="Sprite2D" parent="Character Container/Body" unique_id=591560611]
+position = Vector2(752, 273)
+texture = ExtResource("8_w6suo")
+offset = Vector2(-46, 75)
+
+[node name="Leg 4" type="Sprite2D" parent="Character Container/Body" unique_id=775362708]
+position = Vector2(650, 270)
+texture = ExtResource("9_ka1qx")
+offset = Vector2(56, 78)
+
+[node name="Leg 3" type="Sprite2D" parent="Character Container/Body" unique_id=1298217371]
+position = Vector2(530, 285)
+texture = ExtResource("10_x0y5x")
+offset = Vector2(176, 64)
+
+[node name="Leg 2" type="Sprite2D" parent="Character Container/Body" unique_id=1726759146]
+position = Vector2(430, 300)
+rotation = -0.010471938
+texture = ExtResource("11_lavnu")
+offset = Vector2(275, 48)
+
+[node name="Leg 1" type="Sprite2D" parent="Character Container/Body" unique_id=1920715715]
+position = Vector2(321, 282)
+rotation = -0.019198546
+texture = ExtResource("12_sh3oy")
+offset = Vector2(384, 67)
+
+[node name="Bones" type="Node2D" parent="Character Container" unique_id=623692712]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Character Container/Bones" unique_id=391933127]
+modification_stack = SubResource("SkeletonModificationStack2D_htcqv")
+
+[node name="body" type="Bone2D" parent="Character Container/Bones/Skeleton2D" unique_id=1541235550]
+position = Vector2(513, 154)
+rest = Transform2D(1, 0, 0, 1, 513, 154)
+
+[node name="leg1" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=2020792264]
+position = Vector2(-192, 128)
+rotation = 1.4817846
+rest = Transform2D(0.08889425, 0.99604106, -0.99604106, 0.08889425, -192, 128)
+auto_calculate_length_and_angle = false
+length = 227.909
+bone_angle = 0.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/leg1" unique_id=1614519607]
+rotation = -1.5009831
+remote_path = NodePath("../../../../../Body/Leg 1")
+
+[node name="leg2" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=1621400194]
+position = Vector2(-83, 146)
+rotation = 1.4817846
+rest = Transform2D(0.08889425, 0.99604106, -0.99604106, 0.08889425, -83, 146)
+auto_calculate_length_and_angle = false
+length = 227.909
+bone_angle = 0.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/leg2" unique_id=321017451]
+rotation = -1.4922565
+remote_path = NodePath("../../../../../Body/Leg 2")
+
+[node name="leg3" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=1006845337]
+position = Vector2(17, 131)
+rest = Transform2D(1, 0, 0, 1, 17, 131)
+auto_calculate_length_and_angle = false
+length = 227.909
+bone_angle = 86.28099
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/leg3" unique_id=887490165]
+remote_path = NodePath("../../../../../Body/Leg 3")
+
+[node name="leg4" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=313163755]
+position = Vector2(137, 116)
+rest = Transform2D(1, 0, 0, 1, 137, 116)
+auto_calculate_length_and_angle = false
+length = 227.444
+bone_angle = 95.19698
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/leg4" unique_id=1843630351]
+remote_path = NodePath("../../../../../Body/Leg 4")
+
+[node name="leg5" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=1731570098]
+position = Vector2(239, 119)
+rest = Transform2D(1, 0, 0, 1, 239, 119)
+auto_calculate_length_and_angle = false
+length = 227.444
+bone_angle = 92.23099
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/leg5" unique_id=1874962943]
+remote_path = NodePath("../../../../../Body/Leg 5")
+
+[node name="l_bicept" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=2117828532]
+position = Vector2(210, 104)
+rest = Transform2D(0.99759203, -0.069325276, 0.069325276, 0.99759203, 210, 104)
+auto_calculate_length_and_angle = false
+length = 297.169
+bone_angle = -50.57899
+metadata/_local_pose_override_enabled_ = true
+
+[node name="l_forearm" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body/l_bicept" unique_id=1186776539]
+position = Vector2(157.99997, 261)
+rotation = -0.1279735
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(1, 0, 0, 1, 158.00055, 261.00146)
+auto_calculate_length_and_angle = false
+length = 149.214
+bone_angle = 0.0
+metadata/_local_pose_override_enabled_ = true
+
+[node name="l_hand" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body/l_bicept/l_forearm" unique_id=207666069]
+position = Vector2(170.95453, -43.538036)
+rotation = 0.16387689
+rest = Transform2D(0.9866022, 0.16314435, -0.16314435, 0.9866022, 170.95453, -43.538036)
+auto_calculate_length_and_angle = false
+length = 60.441
+bone_angle = 0.0
+metadata/_local_pose_override_enabled_ = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/l_bicept/l_forearm/l_hand" unique_id=1137912006]
+remote_path = NodePath("../../../../../../../Body/L_hand")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/l_bicept/l_forearm" unique_id=1996128488]
+remote_path = NodePath("../../../../../../Body/L_forearm")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/l_bicept" unique_id=1850764321]
+remote_path = NodePath("../../../../../Body/L_bicept")
+
+[node name="r_bicept2" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=1395177236]
+position = Vector2(263, 147)
+rest = Transform2D(1, 0, 0, 1, 263, 147)
+auto_calculate_length_and_angle = false
+length = 297.169
+bone_angle = 0.0
+
+[node name="r_forearm" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body/r_bicept2" unique_id=692118657]
+position = Vector2(143.00003, 178.99998)
+rotation = -0.12190881
+rest = Transform2D(0.9925783, -0.12160707, 0.12160707, 0.9925783, 143.00003, 178.99998)
+auto_calculate_length_and_angle = false
+length = 149.214
+bone_angle = 0.0
+
+[node name="r_hand" type="Bone2D" parent="Character Container/Bones/Skeleton2D/body/r_bicept2/r_forearm" unique_id=1990869793]
+position = Vector2(118, -59.999992)
+rotation = 0.07908848
+rest = Transform2D(0.99687415, 0.07900605, -0.07900605, 0.99687415, 118, -59.999992)
+auto_calculate_length_and_angle = false
+length = 60.441
+bone_angle = 0.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/r_bicept2/r_forearm/r_hand" unique_id=1282248987]
+remote_path = NodePath("../../../../../../../Body/R_hand")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/r_bicept2/r_forearm" unique_id=246582810]
+remote_path = NodePath("../../../../../../Body/R_foearm")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body/r_bicept2" unique_id=104598444]
+remote_path = NodePath("../../../../../Body/R_bicept")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character Container/Bones/Skeleton2D/body" unique_id=1820987567]
+remote_path = NodePath("../../../../Body/body")
+
+[node name="IK Targets" type="Node" parent="." unique_id=1078513914]
+
+[node name="l_arm Target" type="Node2D" parent="IK Targets" unique_id=1675485086]
+position = Vector2(1052, 477)
+
+[node name="l-hand LookAt" type="Node2D" parent="IK Targets/l_arm Target" unique_id=279683579]
+position = Vector2(3, 2)
+
+[node name="r_arm Target" type="Node2D" parent="IK Targets" unique_id=433962595]
+position = Vector2(1030, 406)
