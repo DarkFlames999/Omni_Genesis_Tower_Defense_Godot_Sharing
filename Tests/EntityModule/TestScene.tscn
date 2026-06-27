@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dn3j22o7orlpc"]
+
+[ext_resource type="Script" uid="uid://b5qjrntplckuw" path="res://Tests/EntityModule/Player.gd" id="1_k84wy"]
+[ext_resource type="Script" uid="uid://rd41iyayoqvl" path="res://Tests/EntityModule/Enemy.gd" id="2_ff3ep"]
+[ext_resource type="Script" uid="uid://bnwmhndsthdfw" path="res://Tests/EntityModule/Utilities/HealthModule.gd" id="2_p6n1n"]
+
+[node name="TestScene" type="Node2D" unique_id=1193926172]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1565581173 node_paths=PackedStringArray("Health_Module")]
+script = ExtResource("1_k84wy")
+Health_Module = NodePath("HealthModule")
+
+[node name="HealthModule" type="Node" parent="Player" unique_id=80738346]
+script = ExtResource("2_p6n1n")
+metadata/_custom_type_script = "uid://bnwmhndsthdfw"
+
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=2067647579 node_paths=PackedStringArray("Health_Module")]
+script = ExtResource("2_ff3ep")
+Health_Module = NodePath("HealthModule")
+
+[node name="HealthModule" type="Node" parent="Enemy" unique_id=710918289]
+script = ExtResource("2_p6n1n")
+metadata/_custom_type_script = "uid://bnwmhndsthdfw"

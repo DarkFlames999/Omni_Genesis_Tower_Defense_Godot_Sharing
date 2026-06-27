@@ -28,6 +28,8 @@ script = ExtResource("3_iu1o8")
 shape = SubResource("RectangleShape2D_3geli")
 debug_color = Color(0.9545978, 0.17161927, 0.33600554, 0.41960785)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxModule" unique_id=531543395]
+
 [node name="HitboxModule" type="Area2D" parent="." unique_id=491745386 node_paths=PackedStringArray("Health_Module")]
 script = ExtResource("3_3geli")
 Health_Module = NodePath("../HealthModule")

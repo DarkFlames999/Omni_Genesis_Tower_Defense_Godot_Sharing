@@ -27,7 +27,7 @@ class _Credits extends NodeState:
 		
 class _Test extends  NodeState:
 	func _onEnter() -> void:
-		changeSceneTo("res://Tests/Entity Test/Entity-Base.tscn")
+		changeSceneTo("res://Tests/EntityModule/TestScene.tscn")
 
 static var States = StateMachine.new({
 	"MainMenu": 	_MainMenu.new(),
