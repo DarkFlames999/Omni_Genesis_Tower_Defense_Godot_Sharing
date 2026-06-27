@@ -57,6 +57,7 @@ func clearHurtboxGroups() -> void:
 
 # ------------------------------------------------------------
 
+## Creates a Hitbox Group with a certain amount of Damage
 func createHitboxGroup(
 	damage: float,
 	groupName: String = "HitboxGroup",
