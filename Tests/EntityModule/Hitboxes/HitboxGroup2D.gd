@@ -17,13 +17,14 @@ var _Hitboxes: Set = Set.new()
 func fromNew(entity: Entity2D, damage: float) -> HitboxGroup2D:
 	Damage = damage
 	Entity = entity
+	return self
+
+func _ready() -> void:
 	area_entered.connect(
 		func(area: Area2D) -> void:
 			if is_instance_of(area, HurtboxGroup2D):
 				Entity.onHitTarget.emit(self, area, area.Entity)
 	)
-	return self
-
 
 ## Create a hitbox (With an option to add it automatically - default is true)
 func createHitbox(
