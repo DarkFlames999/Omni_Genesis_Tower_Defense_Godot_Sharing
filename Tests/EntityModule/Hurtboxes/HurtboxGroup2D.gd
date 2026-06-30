@@ -33,6 +33,13 @@ func fromNew(entity: Entity2D, dmgMultiplier: float = 1, dmgAdder: float = 0) ->
 	DamageAdder = DamageAdder
 	Entity = entity
 	return self
+	
+func _ready() -> void:
+	area_entered.connect(
+		func(area: Area2D) -> void:
+			if is_instance_of(area, HitboxGroup2D):
+				Entity.onHurtByTarget.emit(self, area, area.Entity)
+	)
 
 ## Helps to Calculate any damage that is given by the formula: [br]
 ## [b](damage * multiplier) + adder[\b]
