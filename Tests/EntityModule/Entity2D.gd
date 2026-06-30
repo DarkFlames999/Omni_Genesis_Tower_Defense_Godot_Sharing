@@ -3,10 +3,20 @@ extends Node2D
 
 # --------- SIGNALS ------------
 ## Emits when one of your Hitboxes collides with a Hurtbox
+## [br] You HIT Target
 ## [br] NOTE: CAN INCLUDE YOUR HURTBOX
 signal onHitTarget(
 	hitGroup: HitboxGroup2D,
 	targetHurtGroup: HurtboxGroup2D,
+	target: CollisionObject2D
+)
+
+## Emits when one of your Hurtboxes collides with a Hitbox
+## [br] Target HITS You
+## [br] NOTE: CAN INCLUDE YOUR HITBOX
+signal onHurtByTarget(
+	hurtGroup: HurtboxGroup2D,
+	targetHitGroup: HitboxGroup2D,
 	target: CollisionObject2D
 )
 
