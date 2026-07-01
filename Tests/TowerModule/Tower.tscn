@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://d3y5vsjublfbp"]
+
+[ext_resource type="Script" uid="uid://ds5unoc6tm2dl" path="res://Tests/TowerModule/Tower_MainScript.gd" id="1_nxoip"]
+[ext_resource type="Script" uid="uid://bnwmhndsthdfw" path="res://Scripts/Entity2D/Utilities/HealthModule.gd" id="2_vsgbk"]
+[ext_resource type="Script" uid="uid://diyohfws6mqbq" path="res://Tests/TowerModule/Segment Handler/Segment_Handler.gd" id="3_wwfvm"]
+[ext_resource type="Script" uid="uid://di2hrucfqp1fu" path="res://Tests/TowerModule/Segments/Segment.gd" id="4_2n1r1"]
+[ext_resource type="Script" uid="uid://c6ga8adysdsrd" path="res://Scripts/Entity2D/Hurtboxes/HurtboxGroup2D.gd" id="5_vf4bf"]
+[ext_resource type="Script" uid="uid://b4tpgyhgiao3d" path="res://Scripts/Entity2D/Hurtboxes/Hurtbox2D.gd" id="6_tbqhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4ggm"]
+
+[node name="Tower" type="CharacterBody2D" unique_id=1242621048 node_paths=PackedStringArray("Health_Module")]
+position = Vector2(547, 308)
+script = ExtResource("1_nxoip")
+Health_Module = NodePath("HealthModule")
+
+[node name="HealthModule" type="Node" parent="." unique_id=1427239717]
+script = ExtResource("2_vsgbk")
+MaxHP = 100.0
+metadata/_custom_type_script = "uid://bnwmhndsthdfw"
+
+[node name="SegmentHandler" type="Node" parent="." unique_id=1847936250]
+script = ExtResource("3_wwfvm")
+
+[node name="Segment" type="Node2D" parent="SegmentHandler" unique_id=1949342909 node_paths=PackedStringArray("Health_Module")]
+position = Vector2(547, 308)
+script = ExtResource("4_2n1r1")
+Health_Module = NodePath("HealthModule")
+
+[node name="HealthModule" type="Node" parent="SegmentHandler/Segment" unique_id=696663261]
+script = ExtResource("2_vsgbk")
+metadata/_custom_type_script = "uid://bnwmhndsthdfw"
+
+[node name="HurtboxGroup2D" type="Area2D" parent="SegmentHandler/Segment" unique_id=1402100337 node_paths=PackedStringArray("Entity")]
+script = ExtResource("5_vf4bf")
+Entity = NodePath("../../..")
+metadata/_custom_type_script = "uid://c6ga8adysdsrd"
+
+[node name="Hurtbox2D" type="CollisionShape2D" parent="SegmentHandler/Segment/HurtboxGroup2D" unique_id=1602196117]
+shape = SubResource("RectangleShape2D_v4ggm")
+script = ExtResource("6_tbqhy")
+metadata/_custom_type_script = "uid://b4tpgyhgiao3d"

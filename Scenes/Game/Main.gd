@@ -27,10 +27,10 @@ class _Credits extends NodeState:
 		
 class _Test extends  NodeState:
 	func _onEnter() -> void:
-		changeSceneTo("res://Tests/EntityModule/TestScene.tscn")
+		changeSceneTo("res://Tests/TowerModule/Tower.tscn")
 
 static var States = StateMachine.new({
-	"MainMenu": 	_MainMenu.new(),
+	"MainMenu": _MainMenu.new(),
 	"Settings": _Settings.new(),
 	"Gameplay": _Gameplay.new(),
 	"Credits" : _Credits .new(),

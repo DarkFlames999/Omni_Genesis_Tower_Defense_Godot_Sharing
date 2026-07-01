@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://bd16samf1j2gh"]
-
-[ext_resource type="Script" uid="uid://dill5tmypbkls" path="res://Tests/Entity Test/HealthModule.gd" id="1_by1rf"]
-
-[node name="HealthModule" type="Node2D" unique_id=862766350]
-script = ExtResource("1_by1rf")
